@@ -24,5 +24,3 @@ CREATE TABLE Taxa_reprovacao (
 
     CONSTRAINT PK_Taxa_reprovação PRIMARY KEY (Ano, Região, Localização, Rede)
 );
-
-COPY Taxa_reprovacao FROM '/home/sarahmenks/ED/Desempenho escolar 2011 - Teste.csv' DELIMITER ',' CSV;

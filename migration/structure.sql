@@ -13,7 +13,7 @@ CREATE TABLE idade_serie (
 CREATE TABLE posse_celular (
     id SERIAL PRIMARY KEY,
     idade INT NOT NULL REFERENCES idade_serie(idade),
-    regiao VARCHAR(2) NOT NULL CHECK (regiao IN ('N', 'NE', 'CO', 'SE', 'S')),
+    regiao VARCHAR(2) NOT NULL CHECK (regiao IN ('N', 'NE', 'CO', 'SE', 'S', 'BR')),
     ano INT NOT NULL,
     percentual_celular DECIMAL(3,1) NOT NULL,
     sexo VARCHAR(1) NOT NULL CHECK (sexo IN ('M', 'F', 'T'))
@@ -22,7 +22,7 @@ CREATE TABLE posse_celular (
 CREATE TABLE rendimento_escolar (
     id SERIAL PRIMARY KEY,
     serie VARCHAR(3) NOT NULL,
-    regiao VARCHAR(2) NOT NULL CHECK (regiao IN ('N', 'NE', 'CO', 'SE', 'S')),
+    regiao VARCHAR(2) NOT NULL CHECK (regiao IN ('N', 'NE', 'CO', 'SE', 'S', 'BR')),
     ano INT NOT NULL,
     percentual_aprovacao DECIMAL(3,1) NOT NULL,
     percentual_reprovacao DECIMAL(3,1) NOT NULL,
